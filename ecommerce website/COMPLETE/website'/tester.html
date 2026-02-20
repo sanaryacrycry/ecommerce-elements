@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ecomm.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <dialog id="modal" open="true">
+        <div class="modal-wrap">
+
+            <form action="buyNow.php" method="post">
+            <input type="hidden" id="p-m-id">
+
+            <div class="sect-1">
+
+                <div class="modal-img">
+                    <img src="" id="p-m-img" style="width: 100%; height: 100%;">
+                </div>
+
+            </div>
+            
+            <div class="sect-2">
+                <div class="modal-info">
+                    <table class="m-info-tbl">
+                        <tr>
+                            <th colspan="2"><strong id="p-m-name">name</strong></th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label class="label-modal">Price: </label>
+                            </td>
+                            <td>
+                                <label id="p-m-price"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="label-modal">Stocks: </label>
+                            </td>
+                            <td>
+                                <label id="p-m-stock"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="label-modal">Amount: </label>
+                            </td>
+                            <td>
+                                 <input id="amnt-modal" type="number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="label-modal">Total: </label>
+                            </td>
+                            <td>
+                                <input id="total-modal" type="number" readonly>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="p-m-btns">
+                        <tr>
+                            <td>
+                                <button class="product-btn" type="submit">Check Out</button>
+                                <button class="product-btn" type="button" onclick="modalClose()">Cancel</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <dialog open="true" id="check-out">
+                <center>
+                    <strong>Customer Info</strong>
+                </center>
+                
+
+                <table>
+                    <tr>
+                        <td>
+                            <label>Full name: </label>
+                        </td>
+                        <td>
+                            <input type="text" class="co-input" name="c-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Contact No.:</label>
+                        </td>
+                        <td>
+                            <input type="text"  class="co-input" name="c-num">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Address:</label>
+                        </td>
+                        <td>
+                            <input type="text"  class="co-input" name="c-address">
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            <button type="submit"class="product-btn">Purchase</button>
+                        </td>
+                        <td>
+                            <button type="button" class="product-btn" onclick="checkCancel()">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </dialog>
+        </form>
+        </div>
+    </dialog>
+
+
+</body>
+</html>
